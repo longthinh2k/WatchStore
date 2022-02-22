@@ -1,0 +1,44 @@
+﻿@model IEnumerable<WebBanHang.Models.EF.tbl_DanhMucSanPham>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<button type="button" class="btn btn-outline-danger" style="margin-left:300px; margin-top:50px;" data-mdb-ripple-color="dark"> <a href="/Admin/DanhMuc/Create"> Thêm danh mục mới</a>  </button>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table" style="margin-left:300px;">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.tendanhmuc)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.tendanhmuc)
+            </td>
+            <td>
+                <button type="button" class="btn btn-outline-warning" data-mdb-ripple-color="dark">   @Html.ActionLink("Chỉnh sửa", "Edit", new { id = item.madanhmuc })   </button>
+                <button type="button" class="btn btn-outline-success" data-mdb-ripple-color="dark" style="text-decoration:none; color:floralwhite;">  @Html.ActionLink("Chi tiết", "Details", new { id = item.madanhmuc })    </button>
+                <button type="button" class="btn btn-outline-info" data-mdb-ripple-color="dark">@Html.ActionLink("Xóa", "Delete", new { id = item.madanhmuc })  </button>
+                
+            </td>
+        </tr>
+    }
+
+</table>
+
+
+<style>
+  
+    .btn a:hover{
+        color:#fff;
+    }
+</style>

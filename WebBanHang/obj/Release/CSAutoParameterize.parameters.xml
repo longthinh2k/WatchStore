@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="ClockstoreEntities-Web.config Connection String" description="ClockstoreEntities Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/Context.dbModel.csdl|res://*/Context.dbModel.ssdl|res://*/Context.dbModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=LAPTOP-85N0DJGL\HIGUYS;initial catalog=Clockstore;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="D:\\Project\\clockstore\\WebBanHang\\WebBanHang\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='ClockstoreEntities']/@connectionString" />
+  </parameter>
+  <parameter name="QLBanHangDBContext-Web.config Connection String" description="QLBanHangDBContext Connection String used in web.config by the application to access the database." defaultValue="data source=LAPTOP-85N0DJGL\HIGUYS;initial catalog=Clockstore;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="D:\\Project\\clockstore\\WebBanHang\\WebBanHang\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='QLBanHangDBContext']/@connectionString" />
+  </parameter>
+  <parameter name="QLBanHangDBContext1-Web.config Connection String" description="QLBanHangDBContext1 Connection String used in web.config by the application to access the database." defaultValue="data source=LAPTOP-85N0DJGL\HIGUYS;initial catalog=Clockstore;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="D:\\Project\\clockstore\\WebBanHang\\WebBanHang\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='QLBanHangDBContext1']/@connectionString" />
+  </parameter>
+  <parameter name="QLBanHangDBContext2-Web.config Connection String" description="QLBanHangDBContext2 Connection String used in web.config by the application to access the database." defaultValue="data source=LAPTOP-85N0DJGL\HIGUYS;initial catalog=Clockstore;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="D:\\Project\\clockstore\\WebBanHang\\WebBanHang\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='QLBanHangDBContext2']/@connectionString" />
+  </parameter>
+  <parameter name="QLBanHangDBContext3-Web.config Connection String" description="QLBanHangDBContext3 Connection String used in web.config by the application to access the database." defaultValue="data source=LAPTOP-85N0DJGL\HIGUYS;initial catalog=Clockstore;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="D:\\Project\\clockstore\\WebBanHang\\WebBanHang\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='QLBanHangDBContext3']/@connectionString" />
+  </parameter>
+  <parameter name="QLBanHangDBContext4-Web.config Connection String" description="QLBanHangDBContext4 Connection String used in web.config by the application to access the database." defaultValue="data source=LAPTOP-85N0DJGL\HIGUYS;initial catalog=Clockstore;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="D:\\Project\\clockstore\\WebBanHang\\WebBanHang\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='QLBanHangDBContext4']/@connectionString" />
+  </parameter>
+  <parameter name="QLBanHangDBContext5-Web.config Connection String" description="QLBanHangDBContext5 Connection String used in web.config by the application to access the database." defaultValue="data source=LAPTOP-85N0DJGL\HIGUYS;initial catalog=Clockstore;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="D:\\Project\\clockstore\\WebBanHang\\WebBanHang\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='QLBanHangDBContext5']/@connectionString" />
+  </parameter>
+  <parameter name="QLBanHangDBContext6-Web.config Connection String" description="QLBanHangDBContext6 Connection String used in web.config by the application to access the database." defaultValue="data source=LAPTOP-85N0DJGL\HIGUYS;initial catalog=Clockstore;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="D:\\Project\\clockstore\\WebBanHang\\WebBanHang\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='QLBanHangDBContext6']/@connectionString" />
+  </parameter>
+  <parameter name="QLBanHangDBContext7-Web.config Connection String" description="QLBanHangDBContext7 Connection String used in web.config by the application to access the database." defaultValue="data source=LAPTOP-85N0DJGL\HIGUYS;initial catalog=Clockstore;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="D:\\Project\\clockstore\\WebBanHang\\WebBanHang\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='QLBanHangDBContext7']/@connectionString" />
+  </parameter>
+  <parameter name="QLBanHangDBContext8-Web.config Connection String" description="QLBanHangDBContext8 Connection String used in web.config by the application to access the database." defaultValue="data source=LAPTOP-85N0DJGL\HIGUYS;initial catalog=Clockstore;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="D:\\Project\\clockstore\\WebBanHang\\WebBanHang\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='QLBanHangDBContext8']/@connectionString" />
+  </parameter>
+  <parameter name="QLBanHangDBContext9-Web.config Connection String" description="QLBanHangDBContext9 Connection String used in web.config by the application to access the database." defaultValue="data source=LAPTOP-85N0DJGL\HIGUYS;initial catalog=Clockstore;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="D:\\Project\\clockstore\\WebBanHang\\WebBanHang\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='QLBanHangDBContext9']/@connectionString" />
+  </parameter>
+  <parameter name="QLBanHangDBContext10-Web.config Connection String" description="QLBanHangDBContext10 Connection String used in web.config by the application to access the database." defaultValue="data source=LAPTOP-85N0DJGL\HIGUYS;initial catalog=Clockstore;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="D:\\Project\\clockstore\\WebBanHang\\WebBanHang\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='QLBanHangDBContext10']/@connectionString" />
+  </parameter>
+  <parameter name="QLBanHangDBContext11-Web.config Connection String" description="QLBanHangDBContext11 Connection String used in web.config by the application to access the database." defaultValue="data source=LAPTOP-85N0DJGL\HIGUYS;initial catalog=Clockstore;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="D:\\Project\\clockstore\\WebBanHang\\WebBanHang\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='QLBanHangDBContext11']/@connectionString" />
+  </parameter>
+  <parameter name="QLBanHangDBContext12-Web.config Connection String" description="QLBanHangDBContext12 Connection String used in web.config by the application to access the database." defaultValue="data source=LAPTOP-85N0DJGL\HIGUYS;initial catalog=Clockstore;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="D:\\Project\\clockstore\\WebBanHang\\WebBanHang\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='QLBanHangDBContext12']/@connectionString" />
+  </parameter>
+  <parameter name="QLBanHangDBContext13-Web.config Connection String" description="QLBanHangDBContext13 Connection String used in web.config by the application to access the database." defaultValue="data source=LAPTOP-85N0DJGL\HIGUYS;initial catalog=Clockstore;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="D:\\Project\\clockstore\\WebBanHang\\WebBanHang\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='QLBanHangDBContext13']/@connectionString" />
+  </parameter>
+  <parameter name="QLBanHangDBContext14-Web.config Connection String" description="QLBanHangDBContext14 Connection String used in web.config by the application to access the database." defaultValue="data source=LAPTOP-85N0DJGL\HIGUYS;initial catalog=Clockstore;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="D:\\Project\\clockstore\\WebBanHang\\WebBanHang\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='QLBanHangDBContext14']/@connectionString" />
+  </parameter>
+  <parameter name="QLBanHangDBContext15-Web.config Connection String" description="QLBanHangDBContext15 Connection String used in web.config by the application to access the database." defaultValue="data source=LAPTOP-85N0DJGL\HIGUYS;initial catalog=Clockstore;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="D:\\Project\\clockstore\\WebBanHang\\WebBanHang\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='QLBanHangDBContext15']/@connectionString" />
+  </parameter>
+</parameters>

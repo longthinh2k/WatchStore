@@ -1,0 +1,74 @@
+﻿@using WebBanHang.Models.EF
+@model IEnumerable<tbl_SanPham>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+
+}
+
+
+        @Html.ActionLink("Create New", "Create")
+</p>
+    <table class="table" style="margin-left:280px;">
+        <tr>
+
+            <th>
+                @Html.DisplayNameFor(model => model.tbl_DanhMucSanPham.tendanhmuc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.tensp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.giasanpham)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.anhsp1)
+            </th>
+            <th>
+                <button type="button" class="btn btn-outline-danger" data-mdb-ripple-color="dark"> <a href="/Admin/Product/Create"> Thêm sản phẩm mới</a>  </button>
+                <p>
+            </th>
+
+
+        </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.tbl_DanhMucSanPham.tendanhmuc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.tensp)
+            </td>
+            <td>
+                @Convert.ToDouble(item.giasanpham).ToString("#,### VNĐ")
+
+            </td>
+            <td>
+               <img src=" @Html.DisplayFor(modelItem => item.anhsp1)" style="width:150px;" />
+            </td>
+          
+          
+            <td>
+                <button type="button" class="btn btn-outline-warning" data-mdb-ripple-color="dark">  @Html.ActionLink("Sửa", "Edit", new { id = item.masp })  </button>
+                <button type="button" class="btn btn-outline-success" data-mdb-ripple-color="dark" style="text-decoration:none; color:floralwhite;">  @Html.ActionLink("Chi Tiết", "Details", new { id = item.masp })   </button>
+                <button type="button" class="btn btn-outline-info" data-mdb-ripple-color="dark"> @Html.ActionLink("Xóa", "Delete", new { id = item.masp })   </button>
+
+               
+            </td>
+        </tr>
+    }
+    </table>
+
+
+
+
+<style>
+    .btn a{
+        color:black;
+    }
+    .btn a:hover{
+        color:#fff;
+    }
+</style>
+

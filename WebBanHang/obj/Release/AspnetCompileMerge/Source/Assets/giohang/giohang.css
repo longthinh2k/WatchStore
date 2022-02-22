@@ -1,0 +1,118 @@
+﻿.boddy {
+    padding: 0;
+    margin: 0;
+    border: none;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    overflow: hidden;
+}
+
+.boddy, button {
+    font-size: .6rem;
+}
+
+i {
+    
+    font-size: 2.7rem;
+}
+
+.boddy button:focus {
+    outline: none;
+}
+
+.shopping-container {
+    display: flex;
+}
+
+    .shopping-container button {
+        border-radius: 3rem;
+        background-color: #8019c8;
+        padding: 0 2rem;
+        width: 15rem;
+        height: 5rem;
+        transition: .2s opacity;
+        border: none;
+        color: #fff;
+        font-size:20px;
+    }
+
+        .shopping-container button:hover {
+            cursor: pointer;
+            opacity: .8;
+        }
+
+    .shopping-container .counter-container {
+        border-radius: .1rem;
+        width: 5rem;
+        height: 5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+        .shopping-container .counter-container svg {
+            width: 1rem;
+            color: #fff;
+        }
+
+        .shopping-container .counter-container span:not(.animation-counter) {
+            display: none;
+        }
+
+        .shopping-container .counter-container span.animation-counter {
+            animation: count .4s ease-in-out;
+        }
+
+        .shopping-container .counter-container span {
+            user-select: none;
+            position: absolute;
+            background: #fdf9f9;
+            color: #f50000;
+            font-family: 'Courier New', Courier, monospace;
+            width: 1.8rem;
+            height: 1.8rem;
+            font-size: 1rem;
+            border-radius: 50%;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            top: .2rem;
+            left: 3rem;
+        }
+
+@keyframes count {
+    from {
+        top: .2rem;
+        left: -1.8rem;
+        transform: rotate(120deg);
+    }
+
+    25% {
+        top: -1rem;
+        left: -1.2rem;
+        transform: rotate(80deg);
+    }
+
+    50% {
+        top: -2rem;
+        left: 0rem;
+        transform: rotate(60deg);
+    }
+
+    75% {
+        top: -2rem;
+        left: 1.5rem;
+        transform: rotate(30deg);
+    }
+
+    to {
+        top: .2rem;
+        left: 3rem;
+        transform: rotate(0);
+    }
+}

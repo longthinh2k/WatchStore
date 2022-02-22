@@ -1,0 +1,124 @@
+﻿@model WebBanHang.Models.EF.tbl_ThanhVien
+@{
+    ViewBag.Title = "DangKy";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+    <div class="container">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <ins class="adsbygoogle"
+             style="display:block; text-align:center;"
+             data-ad-layout="in-article"
+             data-ad-format="fluid"
+             data-ad-client="ca-pub-2975528604039680"
+             data-ad-slot="4597062238"></ins>
+        <script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+
+    <div class="container box">
+        <div class="row no-gutters">
+            <div class="col-md-6 form">
+                <div class="form_container">
+                    <h1>Đăng ký tài khoản</h1>
+                    @using (Html.BeginForm())
+                    {
+                        @Html.AntiForgeryToken()
+                        <hr />
+                        @Html.ValidationSummary(true);
+                        <div class="form_group">
+                            <label class="classpan">Tài khoản</label>
+                            @Html.TextBoxFor(model => model.TaiKhoan, new { @class = "txtbox" })
+                            <br />
+                            @Html.ValidationMessageFor(model => model.TaiKhoan, "", new { @class = "text-danger" })
+                            @*<label class="classpan">Tài khoản</label>
+                <input type="text" class="txtbox" placeholder="Nhập tài khoản">*@
+                        </div>
+
+                        <div class="form_group">
+                            <label class="classpan">Mật khẩu</label>
+                            @Html.TextBoxFor(model => model.MatKhau, new { @class = "txtbox" })
+                            <br />
+                            @Html.ValidationMessageFor(model => model.MatKhau, "", new { @class = "text-danger" })
+                            @*<label class="classpan">Mật khẩu</label>
+                <input type="password" class="txtbox" placeholder="Nhập mật khẩu">*@
+                        </div>
+
+                        <div class="form_group">
+                            <label class="classpan">Họ & Tên</label>
+                            @Html.TextBoxFor(model => model.HoTen, new { @class = "txtbox" })
+                            <br />
+                            @Html.ValidationMessageFor(model => model.HoTen, "", new { @class = "text-danger" })
+                            @*<label class="classpan">Họ & Tên</label>
+                <input type="text" class="txtbox" placeholder="Nhập họ & tên">*@
+                        </div>
+
+                        <div class="form_group">
+                            <label class="classpan">Địa Chỉ</label>
+                            @Html.TextBoxFor(model => model.DiaChi, new { @class = "txtbox" })
+                            <br />
+                            @Html.ValidationMessageFor(model => model.DiaChi, "", new { @class = "text-danger" })
+                            @*<label class="classpan">Địa Chỉ</label>
+                <input type="text" class="txtbox" placeholder="Nhập địa chỉ">*@
+                        </div>
+
+                        <div class="form_group">
+                            <label class="classpan">Số Điện Thoại</label>
+                            @Html.TextBoxFor(model => model.SoDienThoai, new { @class = "txtbox" })
+                            <br />
+                            @Html.ValidationMessageFor(model => model.SoDienThoai, "", new { @class = "text-danger" })
+                            @*<label class="classpan">Số Điện Thoại</label>
+                <input type="text" class="txtbox" placeholder="Nhập số điện thoại">*@
+                        </div>
+
+                        <div class="form_group">
+                            <label class="classpan">Email</label>
+                            @Html.TextBoxFor(model => model.Email, new { @class = "txtbox" })
+                            <br />
+                            @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                            @*<label class="classpan">Email</label>
+                <input type="text" class="txtbox" placeholder="Nhập email">*@
+                        </div>
+
+                        <!--<div class="form_group">
+            <label class="classpan">Roll No/Class</label>
+            <input type="text" class="txtbox1" placeholder="Roll No">
+            <input type="text" class="txtbox1" placeholder="Class">
+        </div>
+
+        <div class="form_group">
+            <label class="classpan">Section</label>
+            <select class="ddb">
+                <option>--Section--</option>
+                <option>A</option>
+                <option>B</option>
+                <option>C</option>
+                <option>D</option>
+            </select>
+        </div>-->
+                        <h5 style="color:red;">@ViewBag.ThongBao</h5>
+                        <div class="form_group">
+                            <button href="#" type="submit" class="mybt">Đăng ký</button>
+                        </div>
+                    }
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6">
+                <img class="img-fluid" src="~/Assets/images/5004443.jpg">
+               
+
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+

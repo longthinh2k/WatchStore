@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600&display=swap");
+
+
+.mycart-button {
+	font-family: "poppins", sans-serif;
+	font-size: 14px;
+	position: relative;
+	padding: 10px;
+	width: 250px;
+	height: 60px;
+	background-color: #8019c8;
+	border: 0;
+	border-radius: 50px;
+	color: #fff;
+	text-transform: uppercase;
+	outline: none;
+	overflow: hidden;
+	transition: .3s ease-in-out;
+}
+
+.mycart-button:hover {
+	background-color: #35269b;
+}
+
+.mycart-button:active {
+	transform: scale(.9);
+}
+
+.mycart-button .bxs-cart {
+	position: absolute;
+	z-index: 2;
+	top: 50%;
+	left: -10%;
+	font-size: 2em;
+	transform: translate(-50%, -50%);
+}
+
+.mycart-button .bxl-bitcoin {
+	position: absolute;
+	z-index: 3;
+	top: -20%;
+	left: 52%;
+	font-size: 1.2em;
+	transform: translate(-50%, -50%);
+}
+
+.mycart-button span {
+	position: absolute;
+	z-index: 3;
+	top: 50%;
+	left: 50%;
+	font-size: 1.2em;
+	color: #fff;
+	transform: translate(-50%, -50%);
+}
+
+.mycart-button span.add-to-cart {
+	opacity: 1;
+}
+
+.mycart-button span.added {
+	opacity: 0;
+}
+
+.mycart-button.clicked .bxs-cart {
+	animation: cart 1.5s ease-in-out forwards;
+}
+
+.mycart-button.clicked .bxl-bitcoin {
+	animation: box 1.5s ease-in-out forwards;
+}
+
+.mycart-button.clicked span.add-to-cart {
+	animation: text1 1.5s ease-in-out forwards;
+}
+
+.mycart-button.clicked span.added {
+	animation: text2 1.5s ease-in-out forwards;
+}
+
+@keyframes cart {
+	0% {
+		left: -10%;
+	}
+	40%, 60% {
+		left: 50%;
+	}
+	100% {
+		left: 110%;
+	}
+}
+
+@keyframes box {
+	0%, 40% {
+		top: -20%;
+	}
+	60% {
+		top: 40%;
+		left: 52%;
+	}
+	100% {
+		top: 40%;
+		left: 112%;
+	}
+}
+
+@keyframes text1 {
+	0% {
+		opacity: 1;
+	}
+	20%, 100% {
+		opacity: 0;
+	}
+}
+
+@keyframes text2 {
+	0%, 80% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}

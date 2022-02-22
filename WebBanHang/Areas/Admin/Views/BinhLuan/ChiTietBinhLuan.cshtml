@@ -1,0 +1,54 @@
+﻿@model IEnumerable<WebBanHang.Models.EF.tbl_BinhLuan>
+
+@{
+    ViewBag.Title = "ChiTietBinhLuan";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table" style="margin-left: 270px;">
+    <tr>
+        <th>
+         Tên Khách Hàng
+        </th>
+        <th>
+          Nội Dung Bình Luận
+        </th>
+        <th>
+           Ngày Bình Luận
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in ViewBag.listBinhLuan) {
+    <tr>
+        <td>
+           @item.tenKhachHang
+        </td>
+         <td>
+            @item.noiDung
+        </td>
+        <td>
+            @item.ngayBinhLuan
+        </td>
+        <td>
+  
+            @*@Html.ActionLink("Xóa", "Delete", new { id = item.idBinhLuan })*@
+            <a class="btn btn-outline-info" href="@Url.Action("Delete","BinhLuan", new {id= item.idBinhLuan, binhluanId = ViewBag.BinhLuanId })"> Xóa </a>
+        </td>
+    </tr>
+}
+
+</table>
+<style>
+    td{
+        width:70px;
+    }
+    .btn a:hover {
+        color: #fff;
+    }
+</style>

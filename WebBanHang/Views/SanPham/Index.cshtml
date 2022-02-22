@@ -1,0 +1,253 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model List<WebBanHang.Models.EF.tbl_SanPham>
+
+
+<!-- Search bar-->
+<div class="container mt-4">
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-9">
+            <div class="card p-4 mt-3">
+                <h3 class="heading mt-5 text-center">Xin chào ! Tôi có thể giúp gì cho bạn.</h3>
+                <div class="d-flex justify-content-center px-5">
+
+                    <form action="/SanPham/ketquatimkiem" method="post" class="search">
+                        <input type="text" class="search-input" placeholder="Tìm sản phẩm tại đây..." name="searchString">
+                        <button type="submit" class="search-icon"> <i class="fa fa-search"></i> </button>
+                    </form>
+
+                </div>
+                <div class="row mt-4 g-1 px-4 mb-5">
+                    <div class="col-md-2">
+                        <div class="card-inner p-3 d-flex flex-column align-items-center">
+                            <a href="/KhachHang/TaiKhoan"><img src="https://i.imgur.com/Mb8kaPV.png" width="50"></a>
+                            <div class="text-center mg-text"> <span class="mg-text"><a>Tài Khoản</a></span> </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="card-inner p-3 d-flex flex-column align-items-center">
+                            <img src="https://i.imgur.com/ueLEPGq.png" width="50">
+                            <div class="text-center mg-text"> <span class="mg-text">Thanh Toán</span> </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="card-inner p-3 d-flex flex-column align-items-center">
+                            <img src="https://i.imgur.com/tmqv0Eq.png" width="50">
+                            <div class="text-center mg-text"> <span class="mg-text">Vận Chuyển</span> </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="card-inner p-3 d-flex flex-column align-items-center">
+                            <img src="https://i.imgur.com/D0Sm15i.png" width="50">
+                            <div class="text-center mg-text"> <span class="mg-text">Sản Phẩm</span> </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="card-inner p-3 d-flex flex-column align-items-center">
+                            <img src="https://i.imgur.com/Z7BJ8Po.png" width="50">
+                            <div class="text-center mg-text"> <span class="mg-text">Trả Hàng</span> </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="card-inner p-3 d-flex flex-column align-items-center">
+                            <img src="https://i.imgur.com/YLsQrn3.png" width="50">
+                            <div class="text-center mg-text"> <span class="mg-text">Lưu Ý</span> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Search bar-->
+
+
+
+<section class="product_section ">
+    <div class="container">
+        <div class="product_heading">
+            <h2>
+                Đồng Hồ Casio
+            </h2>
+        </div>
+        <div class="product_container">
+            @foreach (var item in Model)
+            {
+                <div class="box">
+                    <div class="box-content">
+                        <div class="img-box">
+                            <img src="@item.anhsp1" alt="">
+                        </div>
+                        <div class="detail-box">
+                            <div class="text">
+                                <h6>
+                                    <a href="../ChiTietSP/Index/@item.masp">
+                                        @item.tensp
+                                    </a>
+                                </h6>
+                                <h5>
+                                    @Convert.ToSingle(item.giasanpham).ToString("#,### VND")
+                                </h5>
+                            </div>
+                            <div class="like">
+                                <h6>
+                                    Đánh Giá
+                                </h6>
+                                <div class="star_container">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="btn-box">
+                        <button class="mycart-button">
+                            <span class="add-to-cart">@Ajax.ActionLink("Thêm Vào Giỏ Hàng", "ThemGioHang", "GioHang", new { @iMaSP = item.masp, @strURL = Request.Url.ToString() }, new AjaxOptions { HttpMethod = "GET", UpdateTargetId = "GioHangdiv", InsertionMode = InsertionMode.Replace }, new { @class = "form-control btn " })</span>
+                            <div class="added">Thêm thành công</div>
+                            <i class='bx bxs-cart'></i>
+                            <i class='bx bxl-bitcoin'></i>
+                        </button>
+
+
+                    </div>
+                </div>
+            }
+
+
+
+        </div>
+    </div>
+</section>
+
+<!-- end product section -->
+<!-- product section -->
+
+<section class="product_section ">
+    <div class="container">
+        <div class="product_heading">
+            <h2>
+                Đồng Hồ Citizen
+            </h2>
+        </div>
+        <div class="product_container">
+            @foreach (var temp in ViewBag.DanhMuc2)
+            {
+                <div class="box">
+                    <div class="box-content">
+                        <div class="img-box">
+                            <img src="@temp.anhsp1" alt="">
+                        </div>
+                        <div class="detail-box">
+                            <div class="text">
+                                <h6>
+                                    <a href="../ChiTietSP/Index/@temp.masp">
+                                        @temp.tensp
+                                    </a>
+                                </h6>
+                                <h5>
+                                    @Convert.ToSingle(temp.giasanpham).ToString("#,### VND")
+                                </h5>
+                            </div>
+                            <div class="like">
+                                <h6>
+                                    Đánh Giá
+                                </h6>
+                                <div class="star_container">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="btn-box">
+                        <button class="mycart-button">
+                            <span class="add-to-cart">@Ajax.ActionLink("Thêm Vào Giỏ Hàng", "ThemGioHang", "GioHang", new { @iMaSP = temp.masp, @strURL = Request.Url.ToString() }, new AjaxOptions { HttpMethod = "GET", UpdateTargetId = "GioHangdiv", InsertionMode = InsertionMode.Replace }, new { @class = "form-control btn " })</span>
+                            <div class="added">Thêm thành công</div>
+                            <i class='bx bxs-cart'></i>
+                            <i class='bx bxl-bitcoin'></i>
+                        </button>
+
+
+                    </div>
+                </div>
+            }
+
+
+
+
+        </div>
+    </div>
+</section>
+
+
+<!-- end product section -->
+<!-- product section -->
+
+<section class="product_section ">
+    <div class="container">
+        <div class="product_heading">
+            <h2>
+                Đồng Hồ Doxa
+            </h2>
+        </div>
+        <div class="product_container">
+            @foreach (var temp in ViewBag.DanhMuc3)
+            {
+                <div class="box">
+                    <div class="box-content">
+                        <div class="img-box">
+                            <img src="@temp.anhsp1" alt="">
+                        </div>
+                        <div class="detail-box">
+                            <div class="text">
+                                <h6>
+                                    <a href="../ChiTietSP/Index/@temp.masp">
+                                        @temp.tensp
+                                    </a>
+                                </h6>
+                                <h5>
+                                    @Convert.ToSingle(temp.giasanpham).ToString("#,### VND")
+                                </h5>
+                            </div>
+                            <div class="like">
+                                <h6>
+                                    Đánh Giá
+                                </h6>
+                                <div class="star_container">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="btn-box">
+                        <button class="mycart-button">
+                            <span class="add-to-cart">@Ajax.ActionLink("Thêm Vào Giỏ Hàng", "ThemGioHang", "GioHang", new { @iMaSP = temp.masp, @strURL = Request.Url.ToString() }, new AjaxOptions { HttpMethod = "GET", UpdateTargetId = "GioHangdiv", InsertionMode = InsertionMode.Replace }, new { @class = "form-control btn " })</span>
+                            <div class="added">Thêm thành công</div>
+                            <i class='bx bxs-cart'></i>
+                            <i class='bx bxl-bitcoin'></i>
+                        </button>
+
+
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>

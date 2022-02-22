@@ -1,0 +1,78 @@
+﻿@model WebBanHang.Models.EF.tbl_ThanhVien
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<h3 style="margin-left:300px; margin-top:50px;">Bạn có thật sự muốn xóa?</h3>
+<div>
+    <h4>tbl_ThanhVien</h4>
+    <hr />
+    <dl class="dl-horizontal" style="margin-left:300px;">
+        <dt>
+            @Html.DisplayNameFor(model => model.TaiKhoan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TaiKhoan)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MatKhau)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MatKhau)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HoTen)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HoTen)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DiaChi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DiaChi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SoDienThoai)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoDienThoai)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+<div class="form-actions no-color" style="margin-left:300px">
+
+
+    <input type="submit" class="btn btn-outline-info" value="Xóa" class="btn btn-outline-info" />
+    <button type="button" class="btn btn-outline-warning" data-mdb-ripple-color="dark">    @Html.ActionLink("Trở về trước", "Index") </button>
+  
+</div>
+    }
+</div>
+
+

@@ -1,0 +1,99 @@
+﻿@model WebBanHang.Models.EF.tbl_Donhang
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4 style="margin-left:300px;">Chi tiết đơn hàng</h4>
+    <hr />
+    <dl class="dl-horizontal" style="margin-left:300px;">
+        <dt>
+      Tài khoản đặt hàng
+        </dt>
+
+        <dd>
+            @*@Html.DisplayFor(model => model.makhachhang)*@
+            @Html.LabelFor(model => model.makhachhang,"", htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.DropDownList("makhachhang", null, htmlAttributes: new { @class = "form-control", @disabled = "disabled" })
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ngaydathang)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ngaydathang)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.trangthai)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.trangthai)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tongtien)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tongtien)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.diachi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.diachi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sdt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sdt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.magiamgia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.magiamgia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tenkhachhang)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tenkhachhang)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.trangthaidathang)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.trangthaidathang)
+        </dd>
+    </dl>
+</div>
+<p style="margin-left:300px;">
+
+    <button type="button" class="btn btn-outline-warning" data-mdb-ripple-color="dark">    @Html.ActionLink("Trở về trước", "DonHangATM") </button>
+</p>
+
+<style>
+
+    .btn a:hover{
+        color:aliceblue;
+    }
+</style>

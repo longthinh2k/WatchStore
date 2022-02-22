@@ -1,0 +1,94 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model List<WebBanHang.Models.EF.tbl_KinhNghiem>
+
+<h1 class="d-flex justify-content-center" style="margin-top:100px;"> Một số chia sẻ kinh nghiệm đồng hồ</h1>
+
+<section>
+    @foreach (var item in Model)
+    {
+        <div class="post">
+            <h1> @item.tieude</h1>
+            <img src="@item.anh" />
+            <p> @item.noidung1   </p>    
+            
+            <span class="dots">...</span>
+            <span class="more">@item.noidung2</span>
+            <button class="read">Đọc Thêm</button>
+            
+        </div>
+    }
+    </section>
+    <script src="~/Assets/js/jquery-3.4.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".read").click(function () {
+                $(this).prev().toggle();
+                $(this).siblings('.dots').toggle();
+
+                if ($(this).text() == 'Rút Gọn') {
+                    $(this).text('Đọc Thêm');
+                }
+                else {
+                    $(this).text('Rút Gọn');
+                }
+
+            });
+
+        });
+    </script>
+
+    <style>
+        section {
+            padding: 20px;
+        }
+
+        h1 {
+            margin: 0 0 15px 0;
+            color: #8019c8;
+            font-size: 28px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+        }
+
+        p {
+            margin-top: 50px;
+        }
+
+        .more {
+            display: none;
+        }
+
+        .post {
+            color: black;
+            margin-top: 15px;
+            font-size: 18px;
+            text-align: justify;
+            margin-top: 50px;
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+
+            .post:not(:last-child) {
+                margin-bottom: 30px;
+            }
+
+        button {
+            margin-top: 15px;
+            display: block;
+            background-color: #8019c8;
+            color: #fff;
+            border: none;
+            outline: none;
+            padding: 8px 20px;
+            text-transform: capitalize;
+            cursor: pointer;
+            font-size: 20px;
+        }
+    </style>
+

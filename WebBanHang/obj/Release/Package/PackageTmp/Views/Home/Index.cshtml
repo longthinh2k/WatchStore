@@ -1,0 +1,571 @@
+﻿
+
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model List<WebBanHang.Models.EF.tbl_SanPham>
+
+
+<section class="slider_section ">
+    <div class="slider_bg_box">
+        <img src="~/Assets/images/slider-bg.jpg" alt="">
+    </div>
+    <div id="customCarousel1" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="container ">
+                    <div class="row">
+                        <div class="col-md-7">
+                            <div class="detail-box">
+                                <h1>
+                                    MenTime Store
+                                </h1>
+                                <p>
+                                    Đồng hồ phong cách đầy khí phách quý ông
+                                </p>
+                                <div class="btn-box">
+                                    <a href="/SanPham/Index" class="btn1" style="width:200px;">
+                                        Mua sắm ngay
+                                    </a>
+                                    <a href="/KinhNghiem/Index" class="btn2" style="width:200px;">
+
+                                        Kinh nghiệm mua sắm
+                                    </a>
+               
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="container ">
+                    <div class="row">
+                        <div class="col-md-7">
+                            <div class="detail-box">
+                                <h1>
+                                    nhiều thương hiệu
+                                </h1>
+                                <p>
+                                    Chúng tôi đem về nhiều thương hiệu nổi tiếng để các bạn tin dùng
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="container ">
+                    <div class="row">
+                        <div class="col-md-7">
+                            <div class="detail-box">
+                                <h1>
+                                    CSKH 24/24
+                                </h1>
+                                <p>
+                                    Chúng tôi có nhiều chính sách chăm sóc khách hàng phù hợp , đảm bảo không đế các bạn phụ lòng.
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="container ">
+                    <div class="row">
+                        <div class="col-md-7">
+                            <div class="detail-box">
+                                <h1>
+                                    Giao diện thân thiện
+                                </h1>
+                                <p>
+                                    Chúng tôi luôn sử dụng những giao diện gần gũi, đơn giản phù hợp nhất giành cho các bạn.
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <ol class="carousel-indicators ">
+            <li data-target="#customCarousel1" data-slide-to="0" class="active"></li>
+            <li data-target="#customCarousel1" data-slide-to="1"></li>
+            <li data-target="#customCarousel1" data-slide-to="2"></li>
+            <li data-target="#customCarousel1" data-slide-to="3"></li>
+
+        </ol>
+    </div>
+    </div>
+</section>
+<!-- end slider section -->
+<!-- service section -->
+
+<section class="service_section">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6 col-lg-3">
+                <div class="box ">
+                    <div class="img-box">
+                        <img src="~/Assets/images/feature-1.png" alt="">
+                    </div>
+                    <div class="detail-box">
+                        <h5>
+                            GIAO HÀNG NHANH
+                        </h5>
+                        <p>
+                            Tốc độ giao hàng nhanh nhất
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="box ">
+                    <div class="img-box">
+                        <img src="~/Assets/images/feature-2.png" alt="">
+                    </div>
+                    <div class="detail-box">
+                        <h5>
+                            MIỄN PHÍ GIAO HÀNG
+                        </h5>
+                        <p>
+                            Miễn phí giao hàng cho toàn bộ đơn hàng của MENTIME
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="box ">
+                    <div class="img-box">
+                        <img src="~/Assets/images/feature-3.png" alt="">
+                    </div>
+                    <div class="detail-box">
+                        <h5>
+                            CHẤT LƯỢNG TỐT NHẤT
+                        </h5>
+                        <p>
+                            Chúng tôi cam kết hàng chất lượng 100%
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="box ">
+                    <div class="img-box">
+                        <img src="~/Assets/images/feature-4.png" alt="">
+                    </div>
+                    <div class="detail-box">
+                        <h5>
+                            CSKH 24/7
+                        </h5>
+                        <p>
+                            Dịch vụ chăm sóc tận tình chu đáo
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- end service section -->
+<!-- about section -->
+
+<section class="about_section layout_padding">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="img_container">
+                    <div class="img-box b1">
+                        <img src="~/Assets/images/a-1.jpg" alt="">
+                    </div>
+                    <div class="img-box b2">
+                        <img src="~/Assets/images/a-2.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="detail-box">
+                    <h2>
+                        Thông tin về MENTIME
+                    </h2>
+                    <p>
+                        Thành lập vào năm 2021 bởi hai thành viên Mr. Thinh & Mr. Trang
+                    </p>
+       
+                    <!--Modal-->
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-warning " style="color:azure;" data-toggle="modal" data-target="#exampleModal">
+                        Voucher của bạn
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Mã khuyến mãi</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    Voucher của bạn là : GIAM5
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Thoát</button>
+                         
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End Modal-->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end about section -->
+<!-- product section -->
+
+<section class="product_section ">
+    <div class="container">
+        <div class="product_heading">
+            <h2>
+                Top Giá
+            </h2>
+        </div>
+        <div class="product_container">
+            @foreach (var temp in ViewBag.DanhMucGia)
+            {
+                <div class="box">
+                    <div class="box-content">
+                        <div class="img-box">
+                            <img src="@temp.anhsp1" alt="">
+                        </div>
+                        <div class="detail-box">
+                            <div class="text">
+                                <h6>
+                                    <a href="../ChiTietSP/Index/@temp.masp">
+                                        @temp.tensp
+                                    </a>
+                                </h6>
+                                <h5>
+                                    @Convert.ToSingle(temp.giasanpham).ToString("#,### VND")
+                                </h5>
+                            </div>
+                            <div class="like">
+                                <h6>
+                                    Đánh Giá
+                                </h6>
+                                <div class="star_container">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+               
+
+                    <div class="btn-box">
+                        <button class="mycart-button">
+                            <span class="add-to-cart">@Ajax.ActionLink("Thêm Vào Giỏ Hàng", "ThemGioHang", "GioHang", new { @iMaSP = temp.masp, @strURL = Request.Url.ToString() }, new AjaxOptions { HttpMethod = "GET", UpdateTargetId = "GioHangdiv", InsertionMode = InsertionMode.Replace }, new { @class = "form-control btn "})</span>
+                            <div class="added">Thêm thành công</div>
+                            <i class='bx bxs-cart'></i>
+                            <i class='bx bxl-bitcoin'></i>
+                        </button>
+
+                       
+                    </div>
+                </div>
+
+            }
+
+
+
+
+
+
+        </div>
+    </div>
+</section>
+
+<!-- end product section -->
+<!-- product section -->
+
+<section class="product_section ">
+    <div class="container">
+        <div class="product_heading">
+            <h2>
+                Top Ưa Thích
+            </h2>
+        </div>
+        <div class="product_container">
+            @foreach (var item in Model)
+            {
+            <div class="box">
+                <div class="box-content">
+                    <div class="img-box">
+                        <img src="@item.anhsp1" alt="">
+                    </div>
+                    <div class="detail-box">
+                        <div class="text">
+                            <h6>
+                                <a href="../ChiTietSP/Index/@item.masp">
+                                    @item.tensp
+                                </a>
+                            </h6>
+                            <h5>
+                                @Convert.ToSingle(item.giasanpham).ToString("#,### VND")
+                            </h5>
+                        </div>
+                        <div class="like">
+                            <h6>
+                                Đánh Giá
+                            </h6>
+                            <div class="star_container">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="btn-box">
+                    <button class="mycart-button">
+                        <span class="add-to-cart">@Ajax.ActionLink("Thêm Vào Giỏ Hàng", "ThemGioHang", "GioHang", new { @iMaSP = item.masp, @strURL = Request.Url.ToString() }, new AjaxOptions { HttpMethod = "GET", UpdateTargetId = "GioHangdiv", InsertionMode = InsertionMode.Replace }, new { @class = "form-control btn " })</span>
+                        <div class="added">Thêm thành công</div>
+                        <i class='bx bxs-cart'></i>
+                        <i class='bx bxl-bitcoin'></i>
+                    </button>
+                </div>
+            </div>
+            }
+
+
+        </div>
+    </div>
+</section>
+
+
+<!-- end product section -->
+<!-- product section -->
+
+<section class="product_section ">
+    <div class="container">
+        <div class="product_heading">
+            <h2>
+                Hàng Mới
+            </h2>
+        </div>
+        <div class="product_container">
+            @foreach (var temp in ViewBag.DanhMucMoi)
+            {
+            <div class="box">
+                <div class="box-content">
+                    <div class="img-box">
+                        <img src="@temp.anhsp1" alt="">
+                    </div>
+                    <div class="detail-box">
+                        <div class="text">
+                            <h6>
+                                <a href="../ChiTietSP/Index/@temp.masp">
+                                    @temp.tensp
+                                </a>
+                            </h6>
+                            <h5>
+                                @Convert.ToSingle(temp.giasanpham).ToString("#,### VND")
+                            </h5>
+                        </div>
+                        <div class="like">
+                            <h6>
+                                Đánh Giá
+                            </h6>
+                            <div class="star_container">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="btn-box">
+                    <button class="mycart-button">
+                        <span class="add-to-cart">@Ajax.ActionLink("Thêm Vào Giỏ Hàng", "ThemGioHang", "GioHang", new { @iMaSP = temp.masp, @strURL = Request.Url.ToString() }, new AjaxOptions { HttpMethod = "GET", UpdateTargetId = "GioHangdiv", InsertionMode = InsertionMode.Replace }, new { @class = "form-control btn " })</span>
+                        <div class="added">Thêm thành công</div>
+                        <i class='bx bxs-cart'></i>
+                        <i class='bx bxl-bitcoin'></i>
+                    </button>
+
+
+                </div>
+            </div>
+            }
+
+
+
+
+        </div>
+    </div>
+</section>
+
+
+<!-- end product section -->
+<!-- contact section -->
+<section class="contact_section layout_padding">
+    <div class="container">
+        <div class="heading_container">
+            <h2>
+                Liên Hệ
+            </h2>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form_container">
+                    <form action="">
+                        <div>
+                            <input type="text" placeholder="Tên Bạn" />
+                        </div>
+                        <div>
+                            <input type="text" placeholder="Số Điện Thoại" />
+                        </div>
+                        <div>
+                            <input type="email" placeholder="Gmail" />
+                        </div>
+                        <div>
+                            <input type="text" class="message-box" placeholder="Nội Dung" />
+                        </div>
+                        <div class="btn_box">
+                            <button>
+                                Gửi
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-6 ">
+                <div class="map_container">
+                    <div class="map">
+                        <div id="googleMap"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end contact section -->
+<!-- client section -->
+<section class="client_section layout_padding-bottom">
+    <div class="container">
+        <div class="heading_container heading_center">
+            <h2>
+                Đôi Lời Nhắn Gửi
+            </h2>
+        </div>
+    </div>
+    <div id="customCarousel2" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-10 mx-auto">
+                            <div class="box">
+                                <div class="img-box">
+                                    <img src="~/Assets/images/avt.png" alt="">
+                                </div>
+                                <div class="detail-box">
+                                    <div class="client_info">
+                                        <div class="client_name">
+                                            <h5>
+                                                Long Thịnh
+                                            </h5>
+                                            <h6>
+                                                Developer
+                                            </h6>
+                                        </div>
+                                        <i class="fa fa-quote-left" aria-hidden="true"></i>
+                                    </div>
+                                    <p>
+                                        Xin thầy/ cô rủ lòng thương xót cho em qua cái đồ án 2 chứ em ngồi code muốn trĩ luôn cmnr. Tấm thân này còn gì nữa đâu
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-10 mx-auto">
+                            <div class="box">
+                                <div class="img-box">
+                                    <img src="~/Assets/images/client.jpg" alt="">
+                                </div>
+                                <div class="detail-box">
+                                    <div class="client_info">
+                                        <div class="client_name">
+                                            <h5>
+                                                Morojink
+                                            </h5>
+                                            <h6>
+                                                Customer
+                                            </h6>
+                                        </div>
+                                        <i class="fa fa-quote-left" aria-hidden="true"></i>
+                                    </div>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                                        labore
+                                        et
+                                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                                        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                        cillum
+                                        dolore eu fugia
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <ol class="carousel-indicators">
+            <li data-target="#customCarousel2" data-slide-to="0" class="active"></li>
+            <li data-target="#customCarousel2" data-slide-to="1"></li>
+
+        </ol>
+    </div>
+</section>
+<!-- end client section -->
+@*<div class="boddy">
+        <div class="shopping-container">
+            <button id="add-animation">Add to Cart</button>
+
+
+            <div class="counter-container">
+                <span id="counter">1</span>
+                <i class="fa fa-shopping-cart"  style="font-size:40px;"></i>
+            </div>
+        </div>
+    </div>*@
+
+<script src="~/Assets/giohang/addtocart.js"></script>
+
+<div class="fb-comments" data-href="https://localhost:44395/Home/Index" data-width="500" data-numposts="5"></div>

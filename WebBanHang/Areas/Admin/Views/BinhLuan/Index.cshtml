@@ -1,0 +1,46 @@
+﻿@model IEnumerable<WebBanHang.Models.EF.tbl_BinhLuan>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+
+
+
+<table class="table" style="margin-left:270px;">
+    <tr>
+       
+        <th>
+           Tên Sản Phẩm
+        </th>
+        <th>
+           Số lượng
+        </th>
+     
+        
+    </tr>
+
+@foreach (var item in ViewBag.listSanPham) {
+    <tr>
+        <td>
+            <a href="@Url.Action("ChiTietBinhLuan","BinhLuan", new {id= item.Masp })">
+                @item.tenSp
+            </a>
+         
+        </td>
+        <td>
+           @item.soLuong
+        </td>
+      
+        
+    </tr>
+}
+
+</table>
+
+<style>
+    .btn a:hover {
+        color: #fff;
+    }
+</style>

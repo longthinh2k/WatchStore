@@ -1,0 +1,48 @@
+﻿@model IEnumerable<WebBanHang.Models.EF.tbl_LienHe>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table" style="margin-left:300px;">
+    <tr>
+        <th>
+        Tên liên hệ
+        </th>
+        <th>
+        Số điện thoại
+        </th>
+        <th>
+        Email
+        </th>
+        <th>
+        Nội dung góp ý
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.tenlienhe)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sodienthoai)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.emaillienhe)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.noidung)
+        </td>
+
+    </tr>
+}
+
+</table>

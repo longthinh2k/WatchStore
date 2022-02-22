@@ -1,0 +1,99 @@
+﻿@using WebBanHang.Models.Metadata
+@model List<GioHang>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="pt-5 pb-5">
+    <div class="container">
+        <div class="row w-100">
+            <div class="col-lg-12 col-md-12 col-12">
+                <h3 class="display-5 mb-2 text-center">Giỏ Hàng Của Bạn</h3>
+                <p class="mb-5 text-center">
+                    <i class="text-info font-weight-bold">@ViewBag.TongSoLuong</i> sản phẩm trong giỏ
+                </p>
+                @using (Html.BeginForm("CapNhatGioHang", "GioHang", FormMethod.Post))
+                {
+                    foreach (var item in Model)
+                    {
+                        <input value="@item.masp" name="iMaSP" type="hidden" />
+                        <table id="shoppingCart" class="table table-condensed table-responsive">
+                            <thead>
+                                <tr>
+                                    <th style="width:60%">Sản Phẩm</th>
+                                    <th style="width:14%">Giá</th>
+                                    <th style="width:10%">Số Lượng</th>
+                                    <th style="width:16%"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="align-middle">
+                                    <td data-th="Product">
+                                        <div class="row">
+                                            <div class="col-md-3 text-left">
+                                                <img src="@item.anhsp1" alt="" class="img-fluid d-none d-md-block rounded mb-2 shadow ">
+                                            </div>
+                                            <div class="col-md-9 text-left mt-sm-2">
+                                                <h4>@item.tensp</h4>
+                                                <p class="font-weight-light">@item.tendanhmuc</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td data-th="Price">@item.dongiasanpham.ToString("#,### VNĐ")</td>
+                                    <td data-th="Quantity">
+                                        <input type="text" class="form-control form-control-lg text-center" value="@item.soluong" name="txtSoLuong">
+                                    </td>
+                                    <td class="actions" data-th="">
+                                        <div class="text-right">
+                                            <button class="btn update btn-white border-secondary bg-white btn-md mb-2" type="submit" id="btnupdate">
+                                                <i class="fa fa-sync"></i>
+                                            </button>
+                                            <a class="btn delete btn-white border-secondary bg-white btn-md mb-2" href="@Url.Action("XoaGioHang","GioHang",new {@iMasp = item.masp })">
+                                                <i class="fa fa-trash"></i>
+                                            </a> 
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+
+                            </tbody>
+                        </table>
+                    }
+                    <div class="float-right text-right">
+                        <h4>Tổng tiền   :</h4>
+                        <h1>@ViewBag.TongTien.ToString("#,### VNĐ")</h1>
+                    </div>
+                }
+
+            </div>
+        </div>
+        <div class="row mt-4 d-flex align-items-center">
+            <div class="col-sm-6 order-md-2 text-right">
+                <a  onclick="CheckOut()" class="btn btn-primary mb-4 btn-lg pl-5 pr-5">Thanh Toán</a>
+            </div>
+            <div class="col-sm-6 mb-3 mb-m-1 order-md-1 text-md-left">
+                <a href="/SanPham/Index">
+                    <i class="fa fa-arrow-left mr-2"></i> Tiếp tục mua sắm
+                </a>
+            </div>
+        </div>
+    </div>
+    <script type=”text/javascript” src=”http://code.jquery.com/jquery-2.0.3.min.js”></script>
+    <script src="~/Assets/giohang/bootstrap.min.js"></script>
+    <script src="~/Assets/giohang/jquery-3.3.1.slim.min.js"></script>
+    <script src="~/Assets/giohang/popper.min.js"></script>
+    <script src="~/Assets/giohang/fontawesome.js"></script>
+</section>
+
+<script>
+    $(document).ready(function () { });
+
+    function CheckOut() {
+        window.location.href = "/GioHang/Thanhtoan";
+    }
+
+</script>
+
+
+

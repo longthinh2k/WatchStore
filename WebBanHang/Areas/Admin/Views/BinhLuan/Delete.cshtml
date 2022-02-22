@@ -1,0 +1,57 @@
+﻿@model WebBanHang.Models.EF.tbl_BinhLuan
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2 style="margin-left:300px;">Xóa bình luận</h2>
+
+<h3 style="margin-left:300px;">Bạn có thật sự muốn xóa ?</h3>
+<div style="margin-left:300px;">
+
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+        Tên Khách Hàng
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tbl_KhachHang.tenkhachhang)
+        </dd>
+
+        <dt>
+            Tên Sản Phẩm
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tbl_SanPham.tensp)
+        </dd>
+
+        <dt>
+           Nội Dung Bình Luận
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.noidung)
+        </dd>
+
+        <dt>
+       Ngày Bình Luận   
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ngaybinhluan)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+<div class="form-actions no-color">
+    <input type="submit" value="Xóa" class="btn btn-outline-info" />
+    <button type="button" class="btn btn-outline-warning" data-mdb-ripple-color="dark">    @Html.ActionLink("Trở về trước", "Index") </button>
+</div>
+    }
+</div>

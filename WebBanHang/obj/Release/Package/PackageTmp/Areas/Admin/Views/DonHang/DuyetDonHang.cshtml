@@ -1,0 +1,97 @@
+﻿@model WebBanHang.Models.EF.tbl_Donhang
+
+@{
+    ViewBag.Title = "DuyetDonHang";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>DuyetDonHang</h2>
+
+<div>
+    <h4>tbl_Donhang</h4>
+    <hr />
+    <dl class="dl-horizontal" style="margin-left:300px;">
+        <dt>
+            @Html.DisplayNameFor(model => model.tbl_KhachHang.tenkhachhang)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tbl_KhachHang.tenkhachhang)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ngaydathang)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ngaydathang)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.trangthai)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.trangthai)
+        </dd>
+
+        <dt>
+           Tổng tiền
+        </dt>
+
+        <dd>
+            @Convert.ToDouble(Model.tongtien).ToString("#,### VNĐ")
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.diachi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.diachi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sdt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sdt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.magiamgia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.magiamgia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tenkhachhang)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tenkhachhang)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.trangthaidathang)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.trangthaidathang)
+        </dd>
+
+
+
+    </dl>
+</div>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="form-actions no-color" style="margin-left:300px;">
+        <input type="submit" class="btn btn-outline-info" value="Duyệt" class="btn btn-outline-info" />
+        <button type="button" class="btn btn-outline-warning" data-mdb-ripple-color="dark">    @Html.ActionLink("Trở về trước", "DonHangATM") </button>
+    </div>
+}

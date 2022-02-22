@@ -1,0 +1,129 @@
+﻿@model WebBanHang.Models.EF.tbl_SanPham
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<div>
+    <h4 style="margin-left:300px;margin-top:50px;">Chi tiết sản phẩm</h4>
+    <hr />
+    <dl class="dl-horizontal" style="margin-left:400px;">
+        <dt>
+            @Html.DisplayNameFor(model => model.tbl_DanhMucSanPham.tendanhmuc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tbl_DanhMucSanPham.tendanhmuc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tensp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tensp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.giasanpham)
+        </dt>
+
+        <dd>
+            @Convert.ToDouble(Model.giasanpham).ToString("#,### VNĐ")
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.anhsp1)
+        </dt>
+
+        <dd>
+            <img style="width:150px;" src="  @Html.DisplayFor(model => model.anhsp1)" />
+          
+        </dd>
+
+        <dt>
+          
+            @Html.DisplayNameFor(model => model.anhsp2)
+        </dt>
+
+        <dd>
+            <img style="width:150px;" src=" @Html.DisplayFor(model => model.anhsp2)" />
+     
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.anhsp3)
+        </dt>
+
+        <dd>
+            <img style="width:150px;" src="  @Html.DisplayFor(model => model.anhsp3)" />
+          
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.anhsp4)
+        </dt>
+
+        <dd>
+            <img style="width:150px;" src="     @Html.DisplayFor(model => model.anhsp4)" />
+         
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.danhgiasanpham)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.danhgiasanpham)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.motasanpham1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.motasanpham1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.motasanpham2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.motasanpham2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.motasanpham3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.motasanpham3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.motasanpham4)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.motasanpham4)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.luotxemsanpham)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.luotxemsanpham)
+        </dd>
+
+    </dl>
+</div>
+<p style="margin-left:400px;">
+
+    <button type="button" class="btn btn-outline-info" data-mdb-ripple-color="dark">    @Html.ActionLink("Sửa", "Edit", new { id = Model.masp }) </button>
+    <button type="button" class="btn btn-outline-warning" data-mdb-ripple-color="dark">    @Html.ActionLink("Trở về trước", "Index") </button>
+</p>

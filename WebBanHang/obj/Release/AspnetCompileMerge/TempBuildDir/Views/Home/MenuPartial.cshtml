@@ -1,0 +1,18 @@
+﻿@model List<WebBanHang.Models.EF.tbl_DanhMucSanPham>
+<div class="dropdown">
+    <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        SẢN PHẨM
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        @*<a class="dropdown-item" href="/SanPham/DongHoCasioó ">Đồng Hồ Casio</a>
+        <a class="dropdown-item" href="#">Đồng Hồ Citizen</a>
+        <a class="dropdown-item" href="#">Đồng Hồ Doxa</a>*@
+        @foreach (var item in Model)
+        {
+            <a class="dropdown-item" href="@Url.Action("SanPhamTheoDanhMuc","SanPham",new {@madanhmuc = item.madanhmuc})">@item.tendanhmuc</a>
+        }
+        ---------------------------------
+        <a class="dropdown-item" href="/SanPham/Index">Tất Cả Đồng Hồ</a>
+
+    </div>
+</div>

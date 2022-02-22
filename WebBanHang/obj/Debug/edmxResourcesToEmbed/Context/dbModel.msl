@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ClockstoreModelStoreContainer" CdmEntityContainer="ClockstoreEntities">
+    <EntitySetMapping Name="tbl_BinhLuan">
+      <EntityTypeMapping TypeName="ClockstoreModel.tbl_BinhLuan">
+        <MappingFragment StoreEntitySet="tbl_BinhLuan">
+          <ScalarProperty Name="mabinhluan" ColumnName="mabinhluan" />
+          <ScalarProperty Name="noidung" ColumnName="noidung" />
+          <ScalarProperty Name="masp" ColumnName="masp" />
+          <ScalarProperty Name="makhachhang" ColumnName="makhachhang" />
+          <ScalarProperty Name="ngaybinhluan" ColumnName="ngaybinhluan" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_ChiTietDonHang">
+      <EntityTypeMapping TypeName="ClockstoreModel.tbl_ChiTietDonHang">
+        <MappingFragment StoreEntitySet="tbl_ChiTietDonHang">
+          <ScalarProperty Name="madonhang" ColumnName="madonhang" />
+          <ScalarProperty Name="masanpham" ColumnName="masanpham" />
+          <ScalarProperty Name="soluong" ColumnName="soluong" />
+          <ScalarProperty Name="tongtien" ColumnName="tongtien" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_ChiTietGioHang">
+      <EntityTypeMapping TypeName="ClockstoreModel.tbl_ChiTietGioHang">
+        <MappingFragment StoreEntitySet="tbl_ChiTietGioHang">
+          <ScalarProperty Name="magiohang" ColumnName="magiohang" />
+          <ScalarProperty Name="masanpham" ColumnName="masanpham" />
+          <ScalarProperty Name="tongtien" ColumnName="tongtien" />
+          <ScalarProperty Name="soluong" ColumnName="soluong" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_DanhMucSanPham">
+      <EntityTypeMapping TypeName="ClockstoreModel.tbl_DanhMucSanPham">
+        <MappingFragment StoreEntitySet="tbl_DanhMucSanPham">
+          <ScalarProperty Name="madanhmuc" ColumnName="madanhmuc" />
+          <ScalarProperty Name="tendanhmuc" ColumnName="tendanhmuc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Donhang">
+      <EntityTypeMapping TypeName="ClockstoreModel.tbl_Donhang">
+        <MappingFragment StoreEntitySet="tbl_Donhang">
+          <ScalarProperty Name="madonhang" ColumnName="madonhang" />
+          <ScalarProperty Name="makhachhang" ColumnName="makhachhang" />
+          <ScalarProperty Name="ngaydathang" ColumnName="ngaydathang" />
+          <ScalarProperty Name="trangthai" ColumnName="trangthai" />
+          <ScalarProperty Name="tongtien" ColumnName="tongtien" />
+          <ScalarProperty Name="diachi" ColumnName="diachi" />
+          <ScalarProperty Name="sdt" ColumnName="sdt" />
+          <ScalarProperty Name="magiamgia" ColumnName="magiamgia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_GioHang">
+      <EntityTypeMapping TypeName="ClockstoreModel.tbl_GioHang">
+        <MappingFragment StoreEntitySet="tbl_GioHang">
+          <ScalarProperty Name="magiohang" ColumnName="magiohang" />
+          <ScalarProperty Name="makhachhang" ColumnName="makhachhang" />
+          <ScalarProperty Name="tongtien" ColumnName="tongtien" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_KhachHang">
+      <EntityTypeMapping TypeName="ClockstoreModel.tbl_KhachHang">
+        <MappingFragment StoreEntitySet="tbl_KhachHang">
+          <ScalarProperty Name="makhachhang" ColumnName="makhachhang" />
+          <ScalarProperty Name="tenkhachhang" ColumnName="tenkhachhang" />
+          <ScalarProperty Name="sdt" ColumnName="sdt" />
+          <ScalarProperty Name="diachi" ColumnName="diachi" />
+          <ScalarProperty Name="gmail" ColumnName="gmail" />
+          <ScalarProperty Name="taikhoan" ColumnName="taikhoan" />
+          <ScalarProperty Name="matkhau" ColumnName="matkhau" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_SanPham">
+      <EntityTypeMapping TypeName="ClockstoreModel.tbl_SanPham">
+        <MappingFragment StoreEntitySet="tbl_SanPham">
+          <ScalarProperty Name="masp" ColumnName="masp" />
+          <ScalarProperty Name="tensp" ColumnName="tensp" />
+          <ScalarProperty Name="giasanpham" ColumnName="giasanpham" />
+          <ScalarProperty Name="anhsp1" ColumnName="anhsp1" />
+          <ScalarProperty Name="anhsp2" ColumnName="anhsp2" />
+          <ScalarProperty Name="anhsp3" ColumnName="anhsp3" />
+          <ScalarProperty Name="anhsp4" ColumnName="anhsp4" />
+          <ScalarProperty Name="danhgiasanpham" ColumnName="danhgiasanpham" />
+          <ScalarProperty Name="luotxemsanpham" ColumnName="luotxemsanpham" />
+          <ScalarProperty Name="motasanpham1" ColumnName="motasanpham1" />
+          <ScalarProperty Name="motasanpham2" ColumnName="motasanpham2" />
+          <ScalarProperty Name="motasanpham3" ColumnName="motasanpham3" />
+          <ScalarProperty Name="motasanpham4" ColumnName="motasanpham4" />
+          <ScalarProperty Name="madanhmuc" ColumnName="madanhmuc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

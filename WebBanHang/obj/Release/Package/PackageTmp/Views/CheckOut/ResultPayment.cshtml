@@ -1,0 +1,168 @@
+﻿
+@{
+    ViewBag.Title = "ResultPayment";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    // Ở TRANG KẾT QUẢ THANH TOÁN NÀY SAU KHI NHẬN ĐƯỢC THÔNG TIN TỪ CÔNG THANH TOÁN SẼ XỬ LÝ GIẢI MÃ CHUỔI BASE 64 RA ĐỂ ĐỌC DỮ LIỆU
+}
+
+@model WebBanHang.Models.ViewModel.ViewDonHang
+
+@*<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-8">
+            <h1> Kết quả thanh toán</h1>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Trạng thái: @ViewBag.ResponseCode</label>
+
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Mã giao dịch đối tác: @ViewBag.PartnerTrans</label>
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Mô tả: @ViewBag.Description</label>
+            </div>
+        </div>
+    </div>
+
+    Thông tin đơn hàng của bạn: <br />
+    Tên : @Model.tenkhachhang <br />
+    Ngày đặt:@Model.ngaydathang <br />
+    Địa chỉ:@Model.diachi <br />
+    Số điện thoại:@Model.sdt <br />
+    Hình thức thanh toán:@Model.trangthai <br />
+    Mã giảm giá:@Model.magiamgia <br />
+    Tổng tiền:@Model.tongtien <br />*@
+
+
+
+    <div class="container mt-5 mb-5">
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                
+                    <div class="text-left logo p-2 px-5" > <img src="~/Assets/images/fevicon/fevicon.png" width="50">HÓA ĐƠN THANH TOÁN </div>
+                    <div class="invoice p-5">
+                        <h5>Bạn đã đặt hàng thành công!</h5> <span class="font-weight-bold d-block mt-4">Chào, @Model.tenkhachhang </span> <span> Chúng tôi sẽ chuyển hàng đến bạn nhanh nhất có thể, cảm ơn bạn đã tin tưởng Mentime </span>
+                        <div class="payment border-top mt-3 mb-3 border-bottom table-responsive">
+                            <table class="table table-borderless">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="py-2"> <span class="d-block text-muted">Thời gian đặt hàng</span> <span>:@Model.thoigiandathang</span> </div>
+                                        </td>
+                                        <td>
+                                            <div class="py-2"> <span class="d-block text-muted">Số điện thoại</span> <span>@Model.sdt</span> </div>
+                                        </td>
+                                        <td>
+                                            <div class="py-2"> <span class="d-block text-muted">Hình thức thanh toán</span> <span>@Model.hinhthucthanhtoan</span> </div>
+                                        </td>
+                                        <td>
+                                            <div class="py-2"> <span class="d-block text-muted">Địa chỉ</span> <span>@Model.diachi</span> </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        @for(int i=0;i<Model.sanPhams.Count;i++)
+                        {
+                            <div class="product border-bottom table-responsive">
+                                <table class="table table-borderless">
+                                    <tbody>
+                                        <tr>
+                                            <td width="20%"> <img src="@Model.sanPhams[i].anhsp1" width="90"> </td>
+                                            <td width="40%">
+                                                <span class="font-weight-bold">@Model.sanPhams[i].tensp</span>
+                                                <div class="product-qty"> <span class="d-block">Số lượng:@Model.soluong[i] </span> <span>Danh mục : @Model.danhmuc[i]</span> </div>
+                                            </td>
+                                            <td width="40%">
+                                                <div class="text-right"> <span class="font-weight-bold"> @Convert.ToDouble(Model.sanPhams[i].giasanpham).ToString("#,### VNĐ")</span> </div>
+                                               
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        }
+
+                        <div class="row d-flex justify-content-end">
+                            <div class="col-md-5">
+                                <table class="table table-borderless">
+                                    <tbody class="totals">
+
+                                        <tr>
+                                            <td>
+                                                <div class="text-left"> <span class="text-muted">Phí Ship</span> </div>
+                                            </td>
+                                            <td>
+                                                <div class="text-right"> <span>0 VNĐ</span> </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <div class="text-left"> <span class="text-muted">Mã giảm giá</span> </div>
+                                            </td>
+                                            <td>
+                                                <div class="text-right"> <span class="text-success">@Model.magiamgia</span> </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="border-top border-bottom">
+                                            <td>
+                                                <div class="text-left"> <span class="font-weight-bold">Tổng tiền</span> </div>
+                                            </td>
+                                            <td>
+                                                <div class="text-right"> <span class="font-weight-bold">@Convert.ToDouble(Model.tongtien).ToString("#,### VNĐ")</span> </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <p>MENTIME STORE đặt quyền lợi khách hàng lên hàng đầu ! </p>
+                        <p class="font-weight-bold mb-0">Cảm ơn bạn đã mua hàng tại MENTIME!</p> <span>Chúc bạn một ngày vui vẻ ^^</span>
+                    </div>
+                    <div class="d-flex justify-content-between footer p-3"> <span>Bạn cần trợ giúp ? Ấn  <a href="/LienHe/Index"> tại đây </a></span> <span>@Model.thoigiandathang</span> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <style>
+
+
+body {
+    background-color: #ffef;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.card {
+    border: none;
+}
+
+.logo
+{
+    background-color: #8019c8;
+    color:aliceblue;
+ }
+
+.totals tr td {
+    font-size: 13px;
+}
+
+.footer {
+    background-color: #eeeeeea8;
+}
+
+.footer span {
+    font-size: 12px;
+}
+
+.product-qty span {
+    font-size: 12px;
+    color: #808080;
+}
+    </style>

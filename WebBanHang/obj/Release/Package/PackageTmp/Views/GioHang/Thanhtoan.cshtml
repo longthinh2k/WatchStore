@@ -1,0 +1,193 @@
+﻿
+@{
+    ViewBag.Title = "Thanhtoan";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model List<WebBanHang.Models.Metadata.GioHang>
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-8">
+            <h1> Thông tin thanh toán</h1>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Họ và tên</label>
+                <input type="text" class="form-control" id="txtFullName" placeholder="Nhập họ tên" required>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Địa chỉ nhận hàng</label>
+                <input type="text" class="form-control" id="txtAddress" placeholder="Nhập địa chỉ" required>
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Số điện thoại</label>
+                <input type="number" class="form-control" min="10" max="10" id="txtMobile" placeholder="Nhập số điện thoai" required>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Mã giảm giá</label>
+                <input type="text" class="form-control" id="txtVoucher" placeholder="Nhập voucher nếu có">
+            </div>
+        </div>
+        <div class="col-12 col-md-4">
+            <h1>Thông tin đơn hàng</h1>
+            <table id="shoppingCart" class="table table-condensed table-responsive">
+                <thead>
+                    <tr>
+                        <th style="width:60%">Sản phẩm</th>
+                        <th style="width:60%">giá</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model != null && Model.Count > 0)
+                    {
+
+                        foreach (var item in Model)
+                        {
+
+                    <tr class="align-middle">
+                        <td data-th="Price">@item.tensp</td>
+                        <td data-th="Price">@item.ThanhTien.ToString("#,### VNĐ")</td>
+                    </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+
+
+            <table id="shoppingCart" class="table table-condensed table-responsive">
+                <thead>
+                    <tr>
+                       
+                        <th style="width:60%">Tổng tiền</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model != null && Model.Count > 0)
+                    {
+                        var total = Model.Sum(s => s.ThanhTien);
+
+                        <tr class="align-middle">
+
+                            <td data-th="Price">@total.ToString("#,### VNĐ")</td>
+
+                            @*<td class="actions" data-th="">
+                            <div class="text-right">
+                                <button class="btn update btn-white border-secondary bg-white btn-md mb-2" type="submit" id="btnupdate">
+                                    <i class="fa fa-sync"></i>
+                                </button>
+
+                            </div>
+                        </td>*@
+                        </tr>
+
+                    }
+                </tbody>
+            </table>
+            Hình thức thanh toán: <br>
+            <input type="radio" id="html" name="rb_paymentType" value="cod">
+            <label for="html">COD</label><br>
+            <input type="radio" id="css" name="rb_paymentType" value="bank">
+            <label for="css">Ngân hàng</label><br>
+
+
+            <button class="btn update btn-white border-secondary bg-white btn-md mb-2" id="btnPayment">
+                <i class="fa fa-money-bill"></i> Thanh toán
+            </button>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    $(document).ready(function () {
+
+        $("#btnPayment").click(function () {
+
+            var fullname = $("#txtFullName").val();
+            var address = $("#txtAddress").val();
+            var mobile = $("#txtMobile").val();
+            if (fullname == "" || fullname == null) {
+
+                alert("họ tên không được trống");
+                return;
+            }
+
+            if (address == "" || address == null) {
+
+                alert("địa chỉ không được trống");
+                return;
+            }
+            if (mobile == "" || mobile == null) {
+
+                alert("số điện thoại không được trống");
+                return;
+            }
+
+
+            var paymentType = $("input[name='rb_paymentType']:checked").val();
+
+            var input_data = {
+                fullname: fullname,
+                address: address,
+                mobile: mobile,
+                voucher: $("#txtVoucher").val() == "" || $("#txtVoucher").val() == null ? "" : $("#txtVoucher").val()
+            };
+
+            if (paymentType == "cod") {
+  
+
+                var Url = "/CheckOut/PaymentByCOD";
+                $.ajax({
+                    type: 'GET',
+                    url: Url,
+                    data: input_data,
+                    success: function (data) {
+                        var code = data.ResponseCode;
+                        var des = data.Description;
+                        var Extended = data.Extended;
+                        if (code > 0) {
+                            alert(des);
+                            window.location.href = "/CheckOut/ResultPayment?data="+ Extended
+                        } else {
+                            alert(des);
+                        }
+
+                    },
+                    error: function (data) {
+                        console.log("error:" + JSON.stringify(data));
+                    }
+                });
+            } else {
+
+                var Url = "/CheckOut/PaymentByBank";
+                $.ajax({
+                    type: 'GET',
+                    url: Url,
+                    data: input_data,
+                    success: function (data) {
+                        var code = data.ResponseCode;
+                        var des = data.Description;
+                        var Extended = data.Extended;
+                        if (code > 0) {
+                            //ưu vào trường Extended ở dạng mã hóa  Base64 
+                            //Lấy thông tin ở trường Extended để đẩy sang cổng thanh toán ở controller PortralPayment kèm thong tin trong tham số data 
+                            window.location.href = "/PortralPayment/Index?data=" + Extended
+                        } else {
+                            alert(des);
+                        }
+
+                    },
+                    error: function (data) {
+                        console.log("error:" + JSON.stringify(data));
+                    }
+                });
+
+            }
+        });
+
+    });
+
+    function CheckOut() {
+
+    }
+
+</script>
