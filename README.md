@@ -1,6 +1,6 @@
 # WatchStore
 Some pictures of the Website:
-![alt](https://i.imgur.com/91ynu2N.jpg)
+
 ![alt](https://i.imgur.com/91ynu2N.jpg)
 ![alt](https://i.imgur.com/3mpKelN.png)
 ![alt](https://i.imgur.com/9QBoLxC.png)
