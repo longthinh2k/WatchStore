@@ -18,3 +18,6 @@ Some pictures of the Website:
 ![alt](https://i.imgur.com/WUu792d.png)
 ![alt](https://i.imgur.com/cAgjxeh.png)
 ![alt](https://i.imgur.com/jbrRJZH.png)
+![alt](https://i.imgur.com/2C6lrgH.png)
+![alt](https://i.imgur.com/2C6lrgH.png)
+![alt](https://i.imgur.com/koz2toE.png)
